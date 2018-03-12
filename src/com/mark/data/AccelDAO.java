@@ -80,6 +80,7 @@ public class AccelDAO implements DataAccessInterface<AccelSensorModel> {
 
 		try {
 			String sql1 = "SELECT * FROM readings";
+			System.out.println("Hello");
 			Statement stmt1 = con.createStatement();
 			ResultSet rs1 = stmt1.executeQuery(sql1);
 			while (rs1.next()) {
