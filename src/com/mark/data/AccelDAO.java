@@ -52,7 +52,7 @@ public class AccelDAO implements DataAccessInterface<AccelSensorModel> {
 		try {
 			// Query for # of rows with matching username and password
 			String sql1 = String.format("INSERT INTO readings (PITCH, ROLL, YAW, DATETIME) VALUES (%f, %f, %f, '%s')",
-					model.getPitch(), model.getRoll(), model.getYaw());
+					model.getPitch(), model.getRoll(), model.getYaw(), model.getTime());
 			Statement stmt1 = con.createStatement();
 			stmt1.executeUpdate(sql1);
 		} catch (SQLException e) {
