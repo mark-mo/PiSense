@@ -32,9 +32,9 @@ public class AccelDAO implements DataAccessInterface<AccelSensorModel> {
 		if (con == null) {
 			// DB Connection Info
 			con = null;
-			String url = "jdbc:mysql://172.30.79.95:3306/Weather";
-			String username = "weather";
-			String password = "weathPiProject361";
+			String url = "jdbc:mysql://172.31.60.161:3306/PiSense";
+			String username = "accelroot";
+			String password = "thisisthepassword";
 
 			try {
 				// Connect to database
