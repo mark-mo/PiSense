@@ -55,6 +55,7 @@ public class AccelDAO implements DataAccessInterface<AccelSensorModel> {
 					model.getPitch(), model.getRoll(), model.getYaw(), model.getTime());
 			Statement stmt1 = con.createStatement();
 			stmt1.executeUpdate(sql1);
+			stmt1.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 			throw new DatabaseErrorException(e);
