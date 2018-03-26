@@ -23,12 +23,16 @@
     <!-- MySQL Datasource -->
     <bean id="dataSource" destroy-method="close" class="org.apache.commons.dbcp2.BasicDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver" />
-		<property name="url" value="jdbc:mysql://127.0.0.1:55737/localdb" />
+        <!-- Azure -->
+<!-- 		<property name="url" value="jdbc:mysql://127.0.0.1:55737/localdb" /> -->
+<!-- Local -->
 <!--         <property name="url" value="jdbc:mysql://localhost:3306/pisense" /> -->
-        <property name="username" value="azure" />
-        <property name="password" value="6#vWHD_$" />
-<!--         <property name="username" value="root" /> -->
-<!--         <property name="password" value="root" /> -->
+<!-- Openshift -->
+		<property name="url" value="jdbc:mysql://localhost:3306/acceldb" />
+<!--         <property name="username" value="azure" /> -->
+<!--         <property name="password" value="6#vWHD_$" /> -->
+        <property name="username" value="root" />
+        <property name="password" value="root" />
     </bean>
 
     <!-- Setup Transaction Manager -->
